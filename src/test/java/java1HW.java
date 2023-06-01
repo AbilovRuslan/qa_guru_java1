@@ -1,64 +1,80 @@
 
-public class java1HW {
-    public static void main (String [] args) {
+    public class java1HW {
+        // Примитивные типы данных
+        byte aByte; // 8 bit -128 ... 127
+        short aShort = 100; // 16 bit -32768 ... 32767
+        int aInt = 1_100_000; // 32 bit -2 ^ 31 ... (2 ^ 31) -1   самый используемый
+        long aLong = 100L; // 64 bit -2 ^ 63 ... (2 ^ 63) -1
 
-        //Написать код, использующий большинство или все виды операторов, о которых говорилось в лекции.
-        int a = 15;
-        int b = 6;
-        int c = 7;
-        String str1 = "Hello";
-        String str2 = "world";
+        float aFloat = 0.0F; // 32 bit
+        double aDouble = 0.0D; // 64 bit   самый используемый (если просто хранить, но не использовать арифметику)
 
-        System.out.println("a + b = " + (a + b));
-        System.out.println("a - b = " + (a - b));
-        System.out.println("a * b = " + (a * b));
-        System.out.println("a / b = " + (a / b));
-        System.out.println("a % b = " + (a % b));
-        System.out.println("a++ " + (a++));
-        System.out.println("++a " + (++a));
+        char aChar = 'z';
+        boolean aBoolean = true;
 
-        System.out.println("a == b = " + (a == b));
-        System.out.println("a != b = " + (a != b));
-        System.out.println("a > b = " + (a > b));
-        System.out.println("a < b = " + (a < b));
-        System.out.println("a >= b = " + (a >= b));
-        System.out.println("a <= b = " + (a <= b));
+        // Ссылочный тип данных
+        String aString = "hello , qa.guru!";
 
-        if (a > b && c < b) {
-            System.out.println("Значение true");
-        } else
-            System.out.println("Значение false");
+        public static void main(String[] args) {
+            // + -- сложение
+            // - -- вычитание
+            // * -- умножение
+            // / -- целочисленное деление
+            // % -- остаток от деления
+            // инкремент ++
+            // декремент --
 
-        if (a < b || c > b) {
-            System.out.println("Значение true");
-        } else
-            System.out.println("Значение false");
+            // >
+            // <
+            // >=
+            // <=
+            // ==
+            // !=
 
-        System.out.println("str1 + str2 : " + " " + (str1 + str2));
+            // =
+            // +=
+            // -=
 
-        //Показать примеры операций над разными типами данных (int + long, например)
-        int t1 = 15;
-        double t2 = 7.3;
-        float t3 = 1.4f;
-        byte t4 = -78;
-        long t5 = 456654655;
-        char t6 = 'c';
-        String t7 = "Hello";
+            // && (&)
+            // || (|)
+            // !
 
-        double rs1 = t1 / t2;
-        double rs2 = t2 + t3;
-        long rs3 = t1 * t5;
-        int rs4 = t6 + t1;
-        String rs5 = t7 + t6;
-        String rs6 = t7 + t1;
+            byte z = 11;
+            int o = 5, m = 73;
+            long l = 140_000_000_000L;
 
-        System.out.println("int/double :" + rs1);
-        System.out.println("double + float :" + rs2);
-        System.out.println("double * float :" + rs3);
-        System.out.println("char + int :" + rs4);
-        System.out.println("String + char :" + rs5);
-        System.out.println("String + int :" + rs6);
+            System.out.println((m + o) > (o - m));
+            System.out.println(m * o);
+            System.out.println(m / o);
+            System.out.println(m % o);
+            System.out.println(o += m);
+
+            System.out.println(l + m);
+
+            System.out.println(o++);
+            System.out.println(o);
+            System.out.println(++o);
+            System.out.println(o);
+
+            System.out.println(z > o);
+            System.out.println(m != o);
+
+
+            float f = 0.7F;
+            double d = 7.89D;
+
+            System.out.println(((f - d) > 0) && ((d - f) > 0));
+            System.out.println(((f - d) > 0) || ((d - f) > 0));
+            System.out.println(d / f);
+            System.out.println(d % f);
+
+            char c = 'x', t = 'y';
+            boolean message = true;
+
+            System.out.println(c + t);
+            System.out.println(message);
+        }
+
     }
 
 
-}
