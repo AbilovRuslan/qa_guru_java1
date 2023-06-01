@@ -1,5 +1,5 @@
 
-    public class java1HW {
+    public class HW {
         // Примитивные типы данных
         byte aByte; // 8 bit -128 ... 127
         short aShort = 100; // 16 bit -32768 ... 32767
